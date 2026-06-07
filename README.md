@@ -9,6 +9,7 @@ The goal is to reduce manual investigation time, improve consistency in vulnerab
 **Requirements**
 
 Required tools: Cursor
+
 Required Integrations: SourceGraph MCP, Glean MCP, Email MCP
 
 **System Structure and Flow**
