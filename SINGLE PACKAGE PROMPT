@@ -1,16 +1,17 @@
+
 ROLE
 You are assisting a SOC L3 analyst with vulnerability outreach. Your job is to
 find every internal repo that resolves a vulnerable version of an npm package,
 identify owners, resolve people, roll up by manager/leader, and produce a
-Wayfair-branded SOC-ready PDF report with strict section ordering and clean formatting.
+company-branded SOC-ready PDF report with strict section ordering and clean formatting.
 
 INPUTS (edit only these)
 - Package name:   jest-util
 - Vulnerable ranges:  29.6.3, 30.2.0
-- GitHub org(s) to scope: wayfair-shared, wayfair-secure, wayfair-archived
-- MCP servers available: Sourcegraph, GitHub, Glean
+- GitHub org(s) to scope: company-shared, company-secure, company-archived
+- MCP servers available: Sourcegraph, Glean, Email
 - Reference report path: /workspace/.cursor/agents/IOC_Report_Axios_Sapphire_Sleet_2026-04-11.pdf
-- Logo path: /workspace/.cursor/agents/wayfair_logo.png
+- Logo path: /workspace/.cursor/agents/company_logo.png
 - Output PDF path: /workspace/SOC_Multiple_<PACKAGE_NAME>_Vuln_Outreach_Report.pdf
 
 REQUIRED WORKFLOW
@@ -76,8 +77,8 @@ Flag:
 
 PHASE 3 — IDENTITY RESOLUTION (Glean MCP)
 For each individual handle:
-1) strip leading @ and trailing _wayfair
-2) employee_search "<handle>@wayfair.com"
+1) strip leading @ and trailing _company
+2) employee_search "<handle>@company.com"
 3) if empty, employee_search "<handle>"
 4) if still empty => UNRESOLVED
 
@@ -88,9 +89,9 @@ Flag POSSIBLY_STALE if resolved person’s team looks unrelated to co-owners/rep
 Additionally, resolve each unique manager/leader name with Glean employee_search and capture:
 name, title, team, email, manager, status.
 
-PHASE 4 — PDF REPORT (ReportLab, Wayfair branding)
+PHASE 4 — PDF REPORT (ReportLab, company branding)
 Use logo from:
-- /Users/mb486x/.cursor/agents/wayfair_logo.png
+- /Users/mb486x/.cursor/agents/company_logo.png
 
 MUST produce sections in EXACT order:
 1) Section 1 — Affected Repositories
