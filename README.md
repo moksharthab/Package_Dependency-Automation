@@ -7,6 +7,7 @@ The objective of this automation identify internal repositories that resolve vul
 The goal is to reduce manual investigation time, improve consistency in vulnerability outreach, and ensure the right teams are engaged quickly with auditable supporting evidence.
 
 **Requirements**
+
 Required tools: Cursor
 Required Integrations: SourceGraph MCP, Glean MCP, Email MCP
 
